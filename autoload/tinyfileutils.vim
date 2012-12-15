@@ -6,7 +6,7 @@ func! s:GetCurrentExtension()
   return ext
 endfunc
 
-func! tinyfileutil#CreateFile()
+func! tinyfileutils#CreateFile()
   let prefix = expand("%:h")
   let ext = s:GetCurrentExtension()
   let name = input("New filename with extension '" . ext . "': ", expand("%:t:r"), "file")
@@ -19,7 +19,7 @@ func! tinyfileutil#CreateFile()
   startinsert
 endfunc
 
-func! tinyfileutil#DuplicateFile()
+func! tinyfileutils#DuplicateFile()
   let prefix = expand("%:h")
   let ext = s:GetCurrentExtension()
   let name = input("New filename with extension '" . ext . "': ", expand("%:t:r"), "file")
@@ -38,7 +38,7 @@ func! tinyfileutil#DuplicateFile()
   update
 endfunc
 
-func! tinyfileutil#RemoveFile()
+func! tinyfileutils#RemoveFile()
   let path = expand("%")
   let confirmation = inputdialog("Are you sure you want to delete '" . path . "' [y/n]? ")
   if confirmation == "y"

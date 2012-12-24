@@ -1,10 +1,8 @@
-" TODO check if these are mapped already
-
 " Create a file in the same directory as the current one:
-nmap <unique> <silent> <Leader>fc :call tinyfileutils#CreateFile()<CR>
+command! TinyFileUtilsCreateFile call tinyfileutils#CreateFile()
 
 " Duplicate a file in the same directory:
-nmap <unique> <silent> <Leader>fd :call tinyfileutils#DuplicateFile()<CR>
+command! TinyFileUtilsDuplicateFile call tinyfileutils#DuplicateFile()
 
 " Delete a file and its buffer, asking for confirmation:
-nmap <unique> <silent> <Leader>fr :call tinyfileutils#RemoveFile()<CR>
+command! TinyFileUtilsRemoveFile call tinyfileutils#RemoveFile()

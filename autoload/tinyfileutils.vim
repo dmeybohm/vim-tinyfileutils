@@ -34,7 +34,7 @@ func! tinyfileutils#DuplicateFile()
 
   " Start at first line, delete extra line:
   1
-  normal dd
+  normal! dd
   update
 endfunc
 
